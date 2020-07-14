@@ -34,6 +34,8 @@ namespace Backup_Files
             this.TimerBox.Text = Properties.Settings.Default.Title2;
             this.BackupFileAutoBox.Text = Properties.Settings.Default.Title3;
             this.TimerCheck.Checked = Properties.Settings.Default.Title4;
+            Location = new System.Drawing.Point(Properties.Settings.Default.X, Properties.Settings.Default.Y);
+                
         }
         void Form1_Load_1(object sender, EventArgs e)
         {
@@ -46,8 +48,8 @@ namespace Backup_Files
             Properties.Settings.Default.Title2 = this.TimerBox.Text;
             Properties.Settings.Default.Title3 = this.BackupFileAutoBox.Text;
             Properties.Settings.Default.Title4 = this.TimerCheck.Checked;
-
-
+            Properties.Settings.Default.X = this.Location.X;
+            Properties.Settings.Default.Y = this.Location.Y;
             Properties.Settings.Default.Save();
             //Save all the values of TextBoxes, and create some strings in Settings.settings
         }

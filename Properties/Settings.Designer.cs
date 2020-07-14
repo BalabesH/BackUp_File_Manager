@@ -82,5 +82,27 @@ namespace Backup_Files.Properties {
                 this["Title4"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public int X {
+            get {
+                return ((int)(this["X"]));
+            }
+            set {
+                this["X"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public int Y {
+            get {
+                return ((int)(this["Y"]));
+            }
+            set {
+                this["Y"] = value;
+            }
+        }
     }
 }
