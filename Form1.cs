@@ -16,6 +16,7 @@ namespace Backup_Files
             KeyPreview = true;
             KeyDown += (s, e) => { if (e.KeyValue == (char)Keys.F7) BackUpButton_Click(BackUpButton, null); };
             KeyDown += (s, e) => { if (e.KeyValue == (char)Keys.F8) RestoreButton_Click(RestoreButton, null); };
+            KeyDown += (s, e) => { if (e.KeyValue == (char)Keys.F9) ResAutoSavBut_Click(ResAutoSavBut, null); };
             //Hotkeys for button_1 and button_2
             if (TimerCheck.Checked == true)
                 Timer.Enabled = true;
