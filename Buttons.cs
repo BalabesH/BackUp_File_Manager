@@ -87,10 +87,10 @@ namespace Backup_Files
         private void ConfirmButton_Click(object sender, EventArgs e)//Set minutes, that you need for the timer, between copying file
         {
             int a = Convert.ToInt32(TimerBox.Text);
-            if (a <= -1 || a > 200)
+            if (a <= 0 || a > 999)
             {
                 TimerBox.Text = "";
-                NotifLabel.Text = "Enter please integer from 0 to 200";
+                MessageBox.Show("Please, enter numerical value from 1 to 999!", "Files Backuper", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             if (TimerBox.Text != "" && Convert.ToInt32(TimerBox.Text) != 0)
             {
@@ -98,6 +98,7 @@ namespace Backup_Files
                 localTimer = 0;
                 Timer.Enabled = true;
                 Timer.Start();
+                SetTimeLabel.Text = "Time delay between autosaves: " + TimerBox.Text + " min";
             }        
         }
     }

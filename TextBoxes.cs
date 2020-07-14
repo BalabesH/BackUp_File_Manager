@@ -54,7 +54,7 @@ namespace Backup_Files
                 int.TryParse(TimerBox.Text, out a);
                 if (a < 1 || a > 999)
                 {
-                    NotifLabel.Text = "Your number must be from 1 to 999, please try again! Uncheck 'Autosave' for disable timer.";
+                    MessageBox.Show("Your numerical value must be from 1 to 999, please try again!", "Files Backuper", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
         }

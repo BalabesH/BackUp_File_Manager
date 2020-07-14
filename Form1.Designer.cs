@@ -59,15 +59,16 @@
             this.FileBackUpButt = new System.Windows.Forms.Button();
             this.ResAutoSavBut = new System.Windows.Forms.Button();
             this.labelF9 = new System.Windows.Forms.Label();
+            this.SetTimeLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // NotifLabel
             // 
             this.NotifLabel.AutoEllipsis = true;
             this.NotifLabel.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NotifLabel.Location = new System.Drawing.Point(294, 246);
+            this.NotifLabel.Location = new System.Drawing.Point(53, 249);
             this.NotifLabel.Name = "NotifLabel";
-            this.NotifLabel.Size = new System.Drawing.Size(423, 72);
+            this.NotifLabel.Size = new System.Drawing.Size(337, 69);
             this.NotifLabel.TabIndex = 0;
             this.NotifLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -86,7 +87,7 @@
             // RestoreButton
             // 
             this.RestoreButton.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RestoreButton.Location = new System.Drawing.Point(727, 333);
+            this.RestoreButton.Location = new System.Drawing.Point(396, 334);
             this.RestoreButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.RestoreButton.Name = "RestoreButton";
             this.RestoreButton.Size = new System.Drawing.Size(188, 58);
@@ -152,7 +153,7 @@
             // 
             this.labelF7.AutoSize = true;
             this.labelF7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelF7.Location = new System.Drawing.Point(114, 393);
+            this.labelF7.Location = new System.Drawing.Point(111, 394);
             this.labelF7.Name = "labelF7";
             this.labelF7.Size = new System.Drawing.Size(73, 17);
             this.labelF7.TabIndex = 11;
@@ -162,7 +163,7 @@
             // 
             this.labelF8.AutoSize = true;
             this.labelF8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelF8.Location = new System.Drawing.Point(781, 393);
+            this.labelF8.Location = new System.Drawing.Point(452, 394);
             this.labelF8.Name = "labelF8";
             this.labelF8.Size = new System.Drawing.Size(73, 17);
             this.labelF8.TabIndex = 12;
@@ -171,21 +172,21 @@
             // LastSaveLabel
             // 
             this.LastSaveLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
-            this.LastSaveLabel.Location = new System.Drawing.Point(741, 283);
+            this.LastSaveLabel.Location = new System.Drawing.Point(747, 249);
             this.LastSaveLabel.Name = "LastSaveLabel";
             this.LastSaveLabel.Size = new System.Drawing.Size(149, 20);
             this.LastSaveLabel.TabIndex = 13;
             // 
             // Timer
             // 
-            this.Timer.Interval = 60000;
+            this.Timer.Interval = 2000;
             this.Timer.Tick += new System.EventHandler(this.Timer_Tick);
             // 
             // TimerBox
             // 
             this.TimerBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.TimerBox.HideSelection = false;
-            this.TimerBox.Location = new System.Drawing.Point(207, 255);
+            this.TimerBox.Location = new System.Drawing.Point(526, 246);
             this.TimerBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TimerBox.Name = "TimerBox";
             this.TimerBox.Size = new System.Drawing.Size(63, 27);
@@ -198,7 +199,7 @@
             // 
             this.labelDelay.AutoSize = true;
             this.labelDelay.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelDelay.Location = new System.Drawing.Point(51, 258);
+            this.labelDelay.Location = new System.Drawing.Point(396, 246);
             this.labelDelay.Name = "labelDelay";
             this.labelDelay.Size = new System.Drawing.Size(113, 20);
             this.labelDelay.TabIndex = 15;
@@ -208,7 +209,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.Location = new System.Drawing.Point(734, 258);
+            this.label8.Location = new System.Drawing.Point(621, 249);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(120, 20);
             this.label8.TabIndex = 16;
@@ -217,10 +218,10 @@
             // ConfirmButton
             // 
             this.ConfirmButton.Font = new System.Drawing.Font("Microsoft Tai Le", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ConfirmButton.Location = new System.Drawing.Point(199, 293);
+            this.ConfirmButton.Location = new System.Drawing.Point(515, 281);
             this.ConfirmButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ConfirmButton.Name = "ConfirmButton";
-            this.ConfirmButton.Size = new System.Drawing.Size(81, 25);
+            this.ConfirmButton.Size = new System.Drawing.Size(83, 25);
             this.ConfirmButton.TabIndex = 17;
             this.ConfirmButton.Text = "Confirm";
             this.ConfirmButton.UseVisualStyleBackColor = true;
@@ -282,7 +283,7 @@
             // 
             // TimerCheck
             // 
-            this.TimerCheck.Location = new System.Drawing.Point(53, 293);
+            this.TimerCheck.Location = new System.Drawing.Point(400, 281);
             this.TimerCheck.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TimerCheck.Name = "TimerCheck";
             this.TimerCheck.Size = new System.Drawing.Size(109, 25);
@@ -305,7 +306,7 @@
             // ResAutoSavBut
             // 
             this.ResAutoSavBut.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ResAutoSavBut.Location = new System.Drawing.Point(377, 333);
+            this.ResAutoSavBut.Location = new System.Drawing.Point(723, 333);
             this.ResAutoSavBut.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ResAutoSavBut.Name = "ResAutoSavBut";
             this.ResAutoSavBut.Size = new System.Drawing.Size(188, 58);
@@ -318,17 +319,27 @@
             // 
             this.labelF9.AutoSize = true;
             this.labelF9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelF9.Location = new System.Drawing.Point(436, 393);
+            this.labelF9.Location = new System.Drawing.Point(784, 393);
             this.labelF9.Name = "labelF9";
             this.labelF9.Size = new System.Drawing.Size(73, 17);
             this.labelF9.TabIndex = 27;
             this.labelF9.Text = "(press F9)";
+            // 
+            // SetTimeLabel
+            // 
+            this.SetTimeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.SetTimeLabel.Location = new System.Drawing.Point(625, 278);
+            this.SetTimeLabel.Name = "SetTimeLabel";
+            this.SetTimeLabel.Size = new System.Drawing.Size(286, 40);
+            this.SetTimeLabel.TabIndex = 28;
+            this.SetTimeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(955, 423);
+            this.Controls.Add(this.SetTimeLabel);
             this.Controls.Add(this.labelF9);
             this.Controls.Add(this.ResAutoSavBut);
             this.Controls.Add(this.FileBackUpButt);
@@ -399,6 +410,7 @@
         private System.Windows.Forms.Button FileBackUpButt;
         private System.Windows.Forms.Button ResAutoSavBut;
         private System.Windows.Forms.Label labelF9;
+        private System.Windows.Forms.Label SetTimeLabel;
     }
 }
 

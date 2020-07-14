@@ -20,11 +20,11 @@ namespace Backup_Files
             //Hotkeys for button_1 and button_2
             if (TimerCheck.Checked == true)
                 Timer.Enabled = true;
-                Timer.Start();
+            Timer.Start();
             if (TimerCheck.Checked == false)
                 Timer.Enabled = false;
-                Timer.Stop();
-            
+            Timer.Stop();
+
         }
 
         void LoadSettings()
@@ -34,8 +34,8 @@ namespace Backup_Files
             this.TimerBox.Text = Properties.Settings.Default.Title2;
             this.BackupFileAutoBox.Text = Properties.Settings.Default.Title3;
             this.TimerCheck.Checked = Properties.Settings.Default.Title4;
-            Location = new System.Drawing.Point(Properties.Settings.Default.X, Properties.Settings.Default.Y);
-                
+            this.Location = new System.Drawing.Point(Properties.Settings.Default.X, Properties.Settings.Default.Y);
+
         }
         void Form1_Load_1(object sender, EventArgs e)
         {
@@ -200,16 +200,24 @@ namespace Backup_Files
             }
         }
 
-        private void TimerCheck_CheckedChanged(object sender, EventArgs e)//Add labelnotif if Timer have not parameter in minutes
+        async private void TimerCheck_CheckedChanged(object sender, EventArgs e)//Add labelnotif if Timer have not parameter in minutes
         {
             if (TimerCheck.Checked == true)
+            {
                 Timer.Enabled = true;
                 Timer.Start();
+                NotifLabel.Text = "Autosave mode - active";
+                await Task.Delay(3000);
+                NotifLabel.Text = "";
+            }
             if (TimerCheck.Checked == false)
+            {
                 Timer.Enabled = false;
                 Timer.Stop();
+                NotifLabel.Text = "Autosave mode - deactive";
+                await Task.Delay(3000);
+                NotifLabel.Text = "";
+            }
         }
-
-        
-    }   
+    }
 }

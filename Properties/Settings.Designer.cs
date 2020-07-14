@@ -104,5 +104,17 @@ namespace Backup_Files.Properties {
                 this["Y"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string LabelTime {
+            get {
+                return ((string)(this["LabelTime"]));
+            }
+            set {
+                this["LabelTime"] = value;
+            }
+        }
     }
 }
