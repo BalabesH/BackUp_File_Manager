@@ -101,9 +101,8 @@
             this.SaveFileBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.SaveFileBox.Location = new System.Drawing.Point(53, 53);
             this.SaveFileBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.SaveFileBox.Multiline = true;
             this.SaveFileBox.Name = "SaveFileBox";
-            this.SaveFileBox.Size = new System.Drawing.Size(664, 29);
+            this.SaveFileBox.Size = new System.Drawing.Size(664, 24);
             this.SaveFileBox.TabIndex = 3;
             this.SaveFileBox.TextChanged += new System.EventHandler(this.SaveFileBox_TextChanged);
             // 
@@ -122,9 +121,8 @@
             this.BackupFileBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.BackupFileBox.Location = new System.Drawing.Point(53, 128);
             this.BackupFileBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.BackupFileBox.Multiline = true;
             this.BackupFileBox.Name = "BackupFileBox";
-            this.BackupFileBox.Size = new System.Drawing.Size(664, 31);
+            this.BackupFileBox.Size = new System.Drawing.Size(664, 24);
             this.BackupFileBox.TabIndex = 7;
             this.BackupFileBox.TextChanged += new System.EventHandler(this.BackupFileBox_TextChanged);
             // 
@@ -143,7 +141,7 @@
             this.SaveFileButt.Location = new System.Drawing.Point(727, 53);
             this.SaveFileButt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SaveFileButt.Name = "SaveFileButt";
-            this.SaveFileButt.Size = new System.Drawing.Size(184, 30);
+            this.SaveFileButt.Size = new System.Drawing.Size(184, 24);
             this.SaveFileButt.TabIndex = 9;
             this.SaveFileButt.Text = "MAIN FILE";
             this.SaveFileButt.UseVisualStyleBackColor = true;
@@ -179,7 +177,7 @@
             // 
             // Timer
             // 
-            this.Timer.Interval = 2000;
+            this.Timer.Interval = 60000;
             this.Timer.Tick += new System.EventHandler(this.Timer_Tick);
             // 
             // TimerBox
@@ -229,10 +227,10 @@
             // 
             // BackUpFileFoldButt
             // 
-            this.BackUpFileFoldButt.Location = new System.Drawing.Point(823, 128);
+            this.BackUpFileFoldButt.Location = new System.Drawing.Point(824, 128);
             this.BackUpFileFoldButt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BackUpFileFoldButt.Name = "BackUpFileFoldButt";
-            this.BackUpFileFoldButt.Size = new System.Drawing.Size(91, 31);
+            this.BackUpFileFoldButt.Size = new System.Drawing.Size(87, 24);
             this.BackUpFileFoldButt.TabIndex = 18;
             this.BackUpFileFoldButt.Text = "FOLDER";
             this.BackUpFileFoldButt.UseVisualStyleBackColor = true;
@@ -243,7 +241,7 @@
             this.BackUpAutoSaveFoldButt.Location = new System.Drawing.Point(823, 203);
             this.BackUpAutoSaveFoldButt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BackUpAutoSaveFoldButt.Name = "BackUpAutoSaveFoldButt";
-            this.BackUpAutoSaveFoldButt.Size = new System.Drawing.Size(91, 31);
+            this.BackUpAutoSaveFoldButt.Size = new System.Drawing.Size(91, 24);
             this.BackUpAutoSaveFoldButt.TabIndex = 22;
             this.BackUpAutoSaveFoldButt.Text = "FOLDER";
             this.BackUpAutoSaveFoldButt.UseVisualStyleBackColor = true;
@@ -254,7 +252,7 @@
             this.BackUpAutoSaveButt.Location = new System.Drawing.Point(727, 203);
             this.BackUpAutoSaveButt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BackUpAutoSaveButt.Name = "BackUpAutoSaveButt";
-            this.BackUpAutoSaveButt.Size = new System.Drawing.Size(91, 31);
+            this.BackUpAutoSaveButt.Size = new System.Drawing.Size(91, 24);
             this.BackUpAutoSaveButt.TabIndex = 21;
             this.BackUpAutoSaveButt.Text = "FILE";
             this.BackUpAutoSaveButt.UseVisualStyleBackColor = true;
@@ -275,9 +273,8 @@
             this.BackupFileAutoBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.BackupFileAutoBox.Location = new System.Drawing.Point(53, 203);
             this.BackupFileAutoBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.BackupFileAutoBox.Multiline = true;
             this.BackupFileAutoBox.Name = "BackupFileAutoBox";
-            this.BackupFileAutoBox.Size = new System.Drawing.Size(664, 31);
+            this.BackupFileAutoBox.Size = new System.Drawing.Size(664, 24);
             this.BackupFileAutoBox.TabIndex = 19;
             this.BackupFileAutoBox.TextChanged += new System.EventHandler(this.BackupFileAutoBox_TextChanged);
             // 
@@ -297,7 +294,7 @@
             this.FileBackUpButt.Location = new System.Drawing.Point(727, 128);
             this.FileBackUpButt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.FileBackUpButt.Name = "FileBackUpButt";
-            this.FileBackUpButt.Size = new System.Drawing.Size(91, 31);
+            this.FileBackUpButt.Size = new System.Drawing.Size(91, 24);
             this.FileBackUpButt.TabIndex = 25;
             this.FileBackUpButt.Text = "FILE";
             this.FileBackUpButt.UseVisualStyleBackColor = true;

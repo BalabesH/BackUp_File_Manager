@@ -17,7 +17,7 @@ namespace Backup_Files
             KeyDown += (s, e) => { if (e.KeyValue == (char)Keys.F7) BackUpButton_Click(BackUpButton, null); };
             KeyDown += (s, e) => { if (e.KeyValue == (char)Keys.F8) RestoreButton_Click(RestoreButton, null); };
             KeyDown += (s, e) => { if (e.KeyValue == (char)Keys.F9) ResAutoSavBut_Click(ResAutoSavBut, null); };
-            //Hotkeys for button_1 and button_2
+            //Hotkeys
             if (TimerCheck.Checked == true)
                 Timer.Enabled = true;
             Timer.Start();
@@ -141,37 +141,49 @@ namespace Backup_Files
                 }
             }
         }
+
         void RestoreAutoSave_data()
         {
-            if (!File.Exists(SaveFileBox.Text))
-                MessageBox.Show("Location of 'Save File' is not correct, please try again!", "Files Backuper", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            else
+            Again:
+            try
             {
-                if (!File.Exists(BackupFileAutoBox.Text))
-                {
-                    if (Directory.Exists(BackupFileAutoBox.Text))
-                    {
-                        string source = BackupFileAutoBox.Text;
-                        if (!source.EndsWith("\\"))
-                            source += "\\";
-                        source += Path.GetFileName(SaveFileBox.Text);
-                        File.Copy(source, SaveFileBox.Text, true);
-                        RestoreNotif();
-                    }
-                }
-                else
+                if (!File.Exists(SaveFileBox.Text))
+                    MessageBox.Show("Location of 'Save File' is not correct, please try again!", "Files Backuper", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                else if (File.Exists(SaveFileBox.Text))
                 {
                     if (!File.Exists(BackupFileAutoBox.Text))
-                        MessageBox.Show("Location of 'Backup File Folder (Autosave)' is not correct, please try again!", "Files Backuper", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    {
+                        if (Directory.Exists(BackupFileAutoBox.Text))
+                        {
+                            string source = BackupFileAutoBox.Text;
+                            if (!source.EndsWith("\\"))
+                                source += "\\";
+                            source += Path.GetFileName(SaveFileBox.Text);
+                            File.Copy(source, SaveFileBox.Text, true);
+                            RestoreNotif();
+                        }
+                    }
                     else
                     {
-                        File.Copy(BackupFileAutoBox.Text, SaveFileBox.Text, true);
-                        RestoreNotif();
+                        if (!File.Exists(BackupFileAutoBox.Text))
+                            MessageBox.Show("Location of 'Backup File Folder (Autosave)' is not correct, please try again!", "Files Backuper", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        else
+                        {
+                            File.Copy(BackupFileAutoBox.Text, SaveFileBox.Text, true);
+                            RestoreNotif();
+                        }
                     }
                 }
             }
+            catch(Exception ex)
+            {
+                goto Again;
+            }
+            finally 
+            {
+                throw new NotImplementedException();
+            }
         }
-
         async void BackUpNotif()
         {
             NotifLabel.Text = "Data was successfully copied!";
